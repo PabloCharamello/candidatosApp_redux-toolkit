@@ -1,4 +1,4 @@
-const Candidate = ({ candidate }) => {
+const Candidate = ({ candidate, handleFindOne, index }) => {
   return (
     <>
       <div className="user">
@@ -22,8 +22,10 @@ const Candidate = ({ candidate }) => {
           <div>{candidate.phone}</div>
         </div>
         <div className="buttons">
-          <button className="Hide">Ocultar</button>
-          <button className="Save">Guardar</button>
+          <button className="hide" onClick={() => handleFindOne(index)}>
+            Ocultar
+          </button>
+          <button className="save">Guardar</button>
         </div>
       </div>
     </>
