@@ -22,8 +22,8 @@ const Candidate = ({ candidate }) => {
           <div>{candidate.phone}</div>
         </div>
         <div className="buttons">
-          <button className="color1">Ocultar</button>
-          <button className="color2">Guardar</button>
+          <button className="Hide">Ocultar</button>
+          <button className="Save">Guardar</button>
         </div>
       </div>
     </>
