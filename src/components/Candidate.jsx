@@ -25,7 +25,10 @@ const Candidate = ({ candidate, handleFindOne, index, handleSaveOne }) => {
           <button className="hide" onClick={() => handleFindOne(index)}>
             Ocultar
           </button>
-          <button className="save" onClick={() => handleSaveOne(candidate)}>
+          <button
+            className="save"
+            onClick={() => handleSaveOne(candidate, index)}
+          >
             Guardar
           </button>
         </div>

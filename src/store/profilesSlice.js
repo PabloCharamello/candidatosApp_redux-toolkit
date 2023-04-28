@@ -9,15 +9,26 @@ export const profilesSlice = createSlice({
     addCandidate: (state, action) => {
       state.employees = [...state.employees, action.payload];
     },
+    modificarUnValor: (state, action) => {
+      const { indice, nuevoContinente } = action.payload;
+      state.employees[indice].departments = nuevoContinente;
+    },
   },
 });
 
 export const departmentsSlice = createSlice({
-  name: "misDepartamentos",
+  name: "myDepartments",
   initialState: {
-    employees: [],
+    departments: [
+      "África (Ventas)",
+      "América (Organización)",
+      "América (Comercial)",
+      "Asia (Supervisión)",
+      "Europa (Marketing)",
+      "Oceanía (Distribución)",
+    ],
   },
   reducer: {},
 });
 
-export const { addCandidate } = profilesSlice.actions;
+export const { addCandidate, modificarUnValor } = profilesSlice.actions;

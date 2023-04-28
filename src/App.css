@@ -71,3 +71,20 @@ button {
 .save {
   background-color: rgb(58, 93, 110);
 }
+
+.user-picture {
+  width: 180px;
+}
+
+.column {
+  margin-top: 30px;
+  width: 200px;
+}
+
+.employee-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: flex-start;
+}

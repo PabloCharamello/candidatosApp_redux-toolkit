@@ -1,4 +1,11 @@
-const Employee = ({ candidate, index }) => {
+import React from "react";
+import { useSelector } from "react-redux";
+
+const Employee = ({ candidate, index, updateDepartment }) => {
+  const departmentsList = useSelector(
+    (state) => state.myDepartments.departments
+  );
+
   return (
     <>
       <div className="column">
@@ -15,6 +22,14 @@ const Employee = ({ candidate, index }) => {
         </div>
         <div>{candidate.location.city}</div>
         <div>({candidate.location.country})</div>
+        <div>
+          <select onChange={(e) => updateDepartment(e.target.value, index)}>
+            <option value="">Selecciona Región</option>
+            {departmentsList.map((esteValor, i) => (
+              <option key={i}>{esteValor}</option>
+            ))}
+          </select>
+        </div>
       </div>
     </>
   );

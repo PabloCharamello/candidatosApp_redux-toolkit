@@ -25,8 +25,10 @@ const List = () => {
       });
   };
 
-  const handleSaveOne = (candidate) => {
-    dispatch(addCandidate(candidate));
+  const handleSaveOne = (candidate, index) => {
+    const nuevoValor = { ...candidate, department: "" };
+    dispatch(addCandidate(nuevoValor));
+    handleFindOne(index);
   };
 
   return (
