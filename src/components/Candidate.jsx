@@ -1,4 +1,4 @@
-const Candidate = ({ candidate, handleFindOne, index }) => {
+const Candidate = ({ candidate, handleFindOne, index, handleSaveOne }) => {
   return (
     <>
       <div className="user">
@@ -25,7 +25,9 @@ const Candidate = ({ candidate, handleFindOne, index }) => {
           <button className="hide" onClick={() => handleFindOne(index)}>
             Ocultar
           </button>
-          <button className="save">Guardar</button>
+          <button className="save" onClick={() => handleSaveOne(candidate)}>
+            Guardar
+          </button>
         </div>
       </div>
     </>
